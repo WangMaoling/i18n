@@ -28,7 +28,53 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 </script>
 <style >
+=======
+    import vHead from './Header.vue';
+    import vSidebar from './Sidebar.vue';
+    export default {
+        components:{
+            vHead, vSidebar
+        }
+    }
+</script>
+<style >
+.fade-leave-active{
+     display: none;
+     opacity: 0;
+}
+.fade-enter-active{
+    transition: opacity .2s;
+}
+.fade-enter{
+    opacity: 0;
+}
+.fade-leave{
+    opacity: 0;
+    display: none;
+}
+/* 框架定位等 */
+.contentBox{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: absolute;
+}
+.content {
+    position: relative;
+    height: 100%;
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow-x: auto !important;
+    padding: 20px 20px 0 20px;
+}
+.mesContent {
+    width: 100%;
+    /* min-height: 100%; */
+    padding-bottom: 80px;
+}
+>>>>>>> ebfb9de12895124e2ffe0266442dc7963fc1ba36
 </style>
 

@@ -17,6 +17,15 @@ npm run dev
 # build for production with minification 正式打包 打包根路径需要在 webpack.base.conf.js设置
 npm run build
 
+<<<<<<< HEAD
+=======
+# 测试环境打包  或者 命令：npm run build test
+npm run build -- test
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+>>>>>>> ebfb9de12895124e2ffe0266442dc7963fc1ba36
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 

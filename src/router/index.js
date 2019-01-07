@@ -10,12 +10,46 @@ const routes = new Router({
       redirect: '/login',
     },
     {
+<<<<<<< HEAD
+=======
+      path: '/allpatient',
+      component: resolve => require(['../components/common/Home.vue'], resolve)
+    },
+    {
+>>>>>>> ebfb9de12895124e2ffe0266442dc7963fc1ba36
       meta: {
         title: I18n.t('message.pageTitle.login')
       },
       path: '/login',
       component: resolve => require(['../components/page/Login.vue'], resolve)
+<<<<<<< HEAD
     }
   ]
 })
+=======
+    },
+    {
+      path: '*',
+      meta: {
+        title: I18n.t('message.pageTitle.404')
+      },
+      component: resolve => require(['../components/page/404.vue'], resolve)  // 404
+    }
+  ]
+})
+routes.beforeEach((to, from, next) => {
+  let hospitalData = localStorage.getItem("hospitalData")
+  document.title =  to.meta.title;//设置页面title,这个title是根据页面变化而变化的
+  if(!hospitalData||hospitalData==''){
+      if(to.path=='/login'){//如果是登录页面路径，就直接next()
+          next();
+      }else{//不然就跳转到登录
+         next('/login');
+      }
+  }else{
+    next();
+  }
+})
+
+>>>>>>> ebfb9de12895124e2ffe0266442dc7963fc1ba36
 export default routes;
